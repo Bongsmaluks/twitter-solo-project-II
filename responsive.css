@@ -1,0 +1,9 @@
+/* Mobile Optimization for 600px or less */
+@media (max-width: 480px) 
+{
+    /* Hide non-main content sections */
+    .navbar-container,
+    .show-post-container,
+    .tweet:nth-child(n+2) { /* Adjust nth-child(n+2) if only showing first tweet */
+        display: none;
+}
