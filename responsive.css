@@ -1,9 +1,83 @@
 /* Mobile Optimization for 600px or less */
 @media (max-width: 480px) 
 {
-    /* Hide non-main content sections */
-    .navbar-container,
-    .show-post-container,
-    .tweet:nth-child(n+2) { /* Adjust nth-child(n+2) if only showing first tweet */
+    .sidebar-menu_responsive {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center; 
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+        background-color: white; 
+        padding: 10px 0; 
+        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); 
+        z-index: 1000; 
+    }
+
+    .sidebar-menu_responsive i {
+        font-size: 24px; 
+        color: #555; 
+        cursor: pointer; 
+        transition: color 0.2s ease; 
+    }
+    
+    .sidebar-menu_responsive i:hover {
+        color: #1d9bf0; 
+    }
+    
+    .sidebar-menu_responsive a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none; 
+    }
+
+    .sidebar-menu_responsive {
+        height: 50px;
+    }
+
+    /* Default style */
+    .sidebar-menu_responsive {
+        background-color: white; 
+        transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    }
+
+    /* Transparent style */
+    .sidebar-menu_responsive.transparent {
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+        opacity: 0.5; /* Lower opacity for transparency effect */
+    }
+
+
+    .sidebar-menu {
         display: none;
+    }
+
+    .layout__left-sidebar {
+        display: none;
+    }
+
+    /* Show-Posts */
+    .show-post-container {
+        margin-top: 50px;
+    }
+    /* Right-sidebar */
+    .layout__right-sidebar-container {
+    display: none;
+    }
+
+    .layout {
+        display:flex;
+    }
+
+    .layout_main {
+        border: none; 
+        box-shadow: none;
+    }
+
+    .post-container {
+        display: none;
+    }
+    
 }

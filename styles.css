@@ -21,6 +21,12 @@ html {
     cursor: pointer;
 }
 
+/* Responsive-left-sidebar */
+.sidebar-menu_responsive {
+    display: none;
+}
+/* end */
+
 .sidebar-menu {
     position: fixed;
 }
