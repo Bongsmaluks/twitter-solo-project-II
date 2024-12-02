@@ -93,6 +93,9 @@ html {
     
 }
 /*Navigation bar */
+.responsive_profile {
+    display: none;
+}
 
 .navbar-container {
     display: display;

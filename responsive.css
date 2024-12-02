@@ -60,7 +60,7 @@
 
     /* Show-Posts */
     .show-post-container {
-        margin-top: 50px;
+        margin-top: 0px;
     }
     /* Right-sidebar */
     .layout__right-sidebar-container {
@@ -80,4 +80,65 @@
         display: none;
     }
     
+    .responsive_profile {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+
+    .responsive-profile__author-profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    .brand {
+        height: 50px;
+        width: 50px;
+        padding: 12px;
+    }  
+
+    .navbar-container {
+        display: display;
+        align-items: stretch;
+        width: 597px;
+        height: 54px;
+        position: static;
+        top: auto;
+        padding: 0px;
+        backdrop-filter: blur(8px); /* Adds blur behind */
+        background-color: rgba(255, 255, 255, 0.8);
+        backface-visibility: hidden;
+        flex-direction: column;
+        z-index: 3;
+        border: 0 solid black;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+    }
+
+    .responsive_post_button {
+        display: flex;
+        border-radius: 50px;
+        height: 56px;
+        width: 56px;    
+    }
+
+    }
+    .rpb {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        border-radius: 50px;
+        height: 50px;
+        width: 50px; 
+        background-color: #1D9BF0; 
+        fill: white;
+        bottom: 60px;
+        right: 20px;
+    }
+
 }
