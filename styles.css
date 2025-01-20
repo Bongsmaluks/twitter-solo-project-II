@@ -78,8 +78,10 @@ html {
 
 .layout__left-sidebar {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack children vertically */
+    position: relative;
     height: 100vh; /* Ensures the sidebar takes up the full viewport height */
+    z-index: 1;
 }
 
 .sidebar-menu {
@@ -87,15 +89,21 @@ html {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    margin-right: 10px;
 }
 
 .user-profile__block {
     display: flex;
+    flex-direction: row;
+    align-content: space-between;
     align-items: center;
-    margin-top: auto; /* Push it to the bottom */
-    padding: 10px 0;   
+    padding: 10px 0;
+    ; width: calc(100% - 40px); /* Adjust width to fit within sidebar considering padding */
+    margin-top: auto; /* Push it to the bottom of the sidebar */
+    background-color: #fff; /* Optional: Add a background for contrast */
 }
+
 
 .user-profile__author-profile {
     width: 40px;
@@ -117,6 +125,10 @@ html {
 /*Navigation bar */
 .responsive_profile {
     display: none;
+}
+
+.layout__main{
+    margin-left: 7px;
 }
 
 .navbar-container {
@@ -455,7 +467,7 @@ a:hover {
 }
 
 .post-button {
-    background-color: rgb(29, 155, 240); 
+    background-color: #42484e; 
     color: white;
     border: none;
     border-radius: 20px;
@@ -466,7 +478,7 @@ a:hover {
 }
 
 .post-button:hover {
-    background-color: #0d8ae5;
+    background-color: #0F1419;
 }
 
 
@@ -685,21 +697,20 @@ a:hover {
 /* Right Sidebar */
 
 .layout__right-sidebar {
-    /* position: fixed; */
     width: 350px;
-    height: 100vh; /* Full height of the viewport */
-    overflow-y: auto; /* Makes the sidebar scrollable */
-    /* overflow-y: scroll; */
+    height: 100vh; 
+    overflow-y: auto; 
+    
 }
 
 .searchBar {
-    /* width: calc(100% - 600px); */
     width: 300px;
-    position: sticky; /* Keeps the search bar fixed within the scrolling container */
-    top: 0; /* Sticks to the top of the sidebar */
-    background-color: white; /* Ensure background color for readability */
-    z-index: 1; /* Ensures it stays above other content in the sidebar */
-    padding: 10px; /* Adds some padding around the search bar */
+    position: sticky; 
+    top: 0; 
+    background-color: white; 
+    z-index: 1; 
+    padding: 10px; 
+    margin-right: 35px;
 }
 
 .search {   
@@ -712,8 +723,9 @@ a:hover {
     border-bottom-right-radius: 99999px;
     border-top-right-radius: 99999px;
     padding: 7px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 5px;
+  
     
 }
 
@@ -737,8 +749,11 @@ a:hover {
 /* trends-for-you */
 
 .trends-for-you {
-    /* border-radius: 15px;
-    border:1px solid #9097a3; */
+    border: 1px solid #9097a3; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Inner spacing */
+    margin: 20px; /* Outer spacing */
+    background-color: #fff; /* Optional: Background color */
 }
 
 .trends-for-you__block {
@@ -817,7 +832,7 @@ a:hover {
 }
 
 .subscription-box button {
-    background-color: #000;
+    background-color:rgb(29, 155, 240); ;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -827,8 +842,9 @@ a:hover {
 }
 
 .subscription-box button:hover {
-    background-color: #333;
+    background-color: #0d8ae5;
 }
+
 
 /* Who-to-follow */
 
@@ -836,6 +852,7 @@ a:hover {
     background: white;
     border-radius: 15px;
     margin-left: 15px;
+    width: 315px;
     border:1px solid #9097a3;
 }
 
@@ -894,6 +911,13 @@ a:hover {
     text-align: center;
 }
 
+.show-more {
+    margin-left: 10px;
+    font-size: 15px;
+    color:#0d8ae5;
+    font-family: TwitterChirp, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 .user-profile__block {
     padding: 10px 15px;
     display: flex;
@@ -947,6 +971,12 @@ a:hover {
     margin-top: 30px;
     font-family: TwitterChirp, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
+    
+}
+
+.footer-section {
+    margin-left: 20px;
+    justify-content: space-between;
 }
 
 /* responsive_post_button */

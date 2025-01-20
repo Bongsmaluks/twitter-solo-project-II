@@ -15,8 +15,20 @@
         z-index: 1000; 
     }
 
+    .sidebar-menu__item {
+        height: 40px;
+        width: 40px;
+    }
+
+    .sidebar-menu__item-icon {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        width: 40px;   
+    }
+
     .sidebar-menu_responsive i {
-        font-size: 24px; 
+        font-size: 40px; 
         color: #555; 
         cursor: pointer; 
         transition: color 0.2s ease; 
