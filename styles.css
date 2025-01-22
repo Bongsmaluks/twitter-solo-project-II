@@ -903,8 +903,10 @@ a:hover {
     font-size: 15px;
     font-weight: 700;
     border-radius: 30px;
+    width: 60px;
+    height: 30px;
     padding: 5px;
-    min-width: 67px;
+    /* min-width: 67px; */
     display: flex; 
     align-items: center; 
     justify-content: center; 
